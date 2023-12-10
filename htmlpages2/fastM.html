@@ -22,23 +22,32 @@
 
 
 
-
   <section class="mt-4">
     <div class="side">
       <div class="toggle-btn">
         <div class="content ">
-          <div class="d-flex align-items-center gap-3">
+
+          <div class=" content-form ">
             <i onclick="toggleSidebar()" id="sideBar" class="fa-solid fa-bars"></i>
             <h6> قياس الدهون </h6>
           </div>
+
+
+
+
+
           <div class="  ">
+
+
+
             <form action="" class="formAction">
               <div class="nav-form">
-                <div class="input-navbar-side">
-                  <i class="fa-solid fa-search"></i>
-                  <input type="search" id="searchSide" onclick="changeWidth()">
+                <div class="input-navbar-side" id="search-icon">
+                  <i class="fa-solid fa-search  search-icon" onclick="toggleSearchContainer()" ></i>
+                  <input type="search" class="search-input"     >
                 </div>
-                <div class="icon-nav d-flex align-items-center">
+                <div class="icons-navbar " id="search-container"  >
+                <div class="icon-nav " >
 
                   <div>
                     <i id="toggleBtn" class="fa-solid fa-moon"></i>
@@ -48,60 +57,56 @@
                     <span>English</span>
                   </div>
                   <div>
-
-
                     <li class="dropdown">
-                      <li class="btn  dropdown-toggle drowpdownNameUser" type="button" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="../assets/Notifications.png" style="width: 18px;" class="fa-bell" alt="">
+                    <li class="btn  dropdown-toggle drowpdownNameUser" type="button" id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="../assets/Notifications.png" style="width: 18px;" class="fa-bell" alt="">
+                    </li>
+                    <ul class="dropdown-menu Notifications-menu " aria-labelledby="dropdownMenuButton1">
+
+                      <li>
+                        <a class="dropdown-item" href="../subscription.html">
+                          <div class="Notifications">
+                            <div>
+                              <img src="../assets/Icon.png" alt="">
+                            </div>
+                            <div>
+                              <h5>تذكير</h5>
+                              <p>لقد اقترب موعد قياس الدهون</p>
+                            </div>
+                            <div>
+                              <img src="../assets/Close button.png" alt="">
+                            </div>
+                          </div>
+
+                        </a>
                       </li>
 
-                      <ul class="dropdown-menu Notifications-menu " aria-labelledby="dropdownMenuButton1">
-
-                        <li>
-                          <a class="dropdown-item" href="../subscription.html">
-                            <div class="Notifications">
-                              <div>
-                                <img src="../assets/Icon.png" alt="">
-                              </div>
-                              <div>
-                                <h5>تذكير</h5>
-                                <p>لقد اقترب موعد قياس الدهون</p>
-                              </div>
-                              <div>
-                                <img src="../assets/Close button.png" alt="">
-                              </div>
+                      <li>
+                        <a class="dropdown-item" href="../subscription.html">
+                          <div class="Notifications">
+                            <div>
+                              <img src="../assets/Icon.png" alt="">
                             </div>
-
-                          </a>
-                        </li>
-
-                        <li>
-                          <a class="dropdown-item" href="../subscription.html">
-                            <div class="Notifications">
-                              <div>
-                                <img src="../assets/Icon.png" alt="">
-                              </div>
-                              <div>
-                                <h5>تذكير</h5>
-                                <p>لقد اقترب موعد قياس الدهون</p>
-                              </div>
-                              <div>
-                                <img src="../assets/Close button.png" alt="">
-                              </div>
+                            <div>
+                              <h5>تذكير</h5>
+                              <p>لقد اقترب موعد قياس الدهون</p>
                             </div>
+                            <div>
+                              <img src="../assets/Close button.png" alt="">
+                            </div>
+                          </div>
 
-                          </a>
-                        </li>
-
-
-
-                      </ul>
+                        </a>
                       </li>
+
+
+
+                    </ul>
+                    </li>
                   </div>
                   <div class="user">
                     <i class="fa-solid fa-gear"></i>
-                    <!-- <img src="../assets/Setting.png" class="fa-user" style="width: 18px;"  alt=""> -->
                     <li class="dropdown">
                     <li class="btn  dropdown-toggle drowpdownNameUser" type="button" id="dropdownMenuButton1"
                       data-bs-toggle="dropdown" aria-expanded="false">
@@ -119,11 +124,10 @@
 
                   </div>
                 </div>
-
+</div>
 
               </div>
             </form>
-
 
 
 
@@ -145,9 +149,9 @@
           </a>
         </div>
 
-        <a href="indexLogin.html">الرئيسية</a>
+        <a href="indexLogin.html" class="active">الرئيسية</a>
 
-        <a href="fastM.html" class="active">قياس الدهون </a>
+        <a href="fastM.html">قياس الدهون </a>
 
 
         <a href="meals.html">تصميم الوجبات </a>
@@ -185,7 +189,6 @@
 
       </div>
     </div>
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary   " id="navbar">
       <div class="container-fluid">
         <div class="logo">
@@ -258,9 +261,8 @@
       </div>
     </nav>
 
-
-
   </section>
+
 
 
 
@@ -286,14 +288,16 @@
         <div class="buttons">
           <div class="buttons">
             <button class=" mb-4 men activeButton" id="activeButton"
-              onclick="document.getElementById('image-change').src='../assets/fastM.png' ,toggleVisibility()">رجل</button>
+              onclick="document.getElementById('image-change').src='../assets/fastM.png' , toggleInVisibility()">رجل</button>
             <button id="activeButtonWomen" class=" mb-4 women" onclick="document.getElementById('image-change').src='../assets/fastw.png'
-            ,toggleInVisibility()
+            ,toggleVisibility()
           ">امرأة</button>
           </div>
 
         </div>
-        <form class="formFastM">
+        <!-- <form class="formFastM">
+
+
           <div class="style-form ">
             <div class="input-form">
               <label for=""> الوزن (كجم)</label>
@@ -345,7 +349,59 @@
 
 
           </div>
+        </form> -->
+
+        <form action="" class="form__index">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details"> الوزن (كجم)  </span>
+              <input type="text" class="input__form">
+            </div>
+            <div class="input-box">
+              <span class="details">  الطول (سم) </span>
+              <input type="text" class="input__form">
+            </div>
+            <div class="input-box">
+              <span class="details"> الرقبة (سم)  </span>
+              <input type="text" class="input__form" placeholder="">
+            </div>
+            <div class="input-box">
+              <span class="details"> الوسط (سم)  </span>
+              <input type="text" class="input__form" placeholder="">
+            </div>
+            <div class="input-box d-none" id="newInput">
+              <span class="details ">  المؤخرة (سم)  </span>
+              <input type="text" class="input__form" placeholder="" id="newInput">
+            </div>
+          </div>
+          <div class="btn__form">
+            <button class="btn__form-index">احسب</button>
+
+          </div>
+
+          <div class=" deatails   ">
+            <div class="dt-text">
+              <p class="p-fast">نسبة الدهون</p>
+              <p class="p-fast"> وزن الدهون</p>
+              <p class="p-fast"> وزن الكتلة اللادهنية</p>
+              <p class="p-fast"> فئة الدهون</p>
+
+            </div>
+            <div class="dt-text">
+              <p class="p-fast">0 %</p>
+              <p class="p-fast"> 0 كجم</p>
+              <p class="p-fast"> 0 كجم</p>
+              <p class="p-fast">0 كجم</p>
+
+            </div>
+
+
+          </div>
         </form>
+
+
+
+
         <div class="row  content ">
           <div class="col-md-6">
             <h5>الطريقة الصحيحة لأخذ القياسات</h5>

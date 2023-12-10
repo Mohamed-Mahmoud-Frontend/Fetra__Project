@@ -188,7 +188,8 @@ border-radius: 19px
 
 
 }
-.formFastM .deatails p{
+
+.p-fast{
    color: black;
    font-size: 30px;
    font-family: Plus Jakarta Sans;
@@ -240,7 +241,11 @@ line-height: 30px;
 word-wrap: break-word
 }
 
-
+.content{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
 
 #fats .content h5{
 
@@ -326,7 +331,7 @@ word-wrap: break-word
    flex-direction: column;
 }
 }
-@media screen and (min-width:350px)and (max-width:500px) {
+@media screen and (min-width:300px)and (max-width:500px) {
    .formFastM{
       width: 99%;
          margin: auto;

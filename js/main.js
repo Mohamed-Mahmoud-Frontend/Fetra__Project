@@ -142,13 +142,28 @@ activeButtonWomen.addEventListener("click", function () {
 
 })
 
-var s = document.getElementById("searchSide");
+// search side
 
-function changeWidth() {
-s.style.width ="100%"
+    function toggleSearchContainer() {
+        const searchContainer = document.getElementById('search-container');
+        searchContainer.style.display = (searchContainer.style.display === 'none' || searchContainer.style.display === '') ? 'block' : 'none';
+    }
 
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 let x = document.getElementById("closeForm");
 
@@ -161,4 +176,19 @@ document.getElementById("myButton").onclick = function() {
 function toggleDropdown() {
   var dropdown = document.getElementById("notificationDropdown");
   dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+}
+
+//=======================upload image=================
+function previewImage(input) {
+  const file = input.files[0];
+
+  if (file) {
+      const reader = new FileReader();
+
+      reader.onload = function(e) {
+          document.getElementById('profile-image').src = e.target.result;
+      };
+
+      reader.readAsDataURL(file);
+  }
 }

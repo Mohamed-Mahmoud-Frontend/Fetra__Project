@@ -122,7 +122,7 @@ body {
 
 .formAction {
   background: white;
-  width: 750px;
+  /* width: 750px; */
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -146,15 +146,23 @@ body {
 
 
 }
+.content-form {
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+  gap: 15px;
+
+}
 
 .input-navbar-side {
   /* border: 1px solid red; */
   display: flex;
   margin-right: 0px;
-  width: 100%;
+  /* width: 100% !important; */
+  /* width: 400px; */
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content:center;
   margin-left: 0px;
   gap: .5rem;
   position: relative;
@@ -174,7 +182,8 @@ body {
 }
 
 .input-navbar-side input {
-  min-width: 100% !important;
+  width: 400px !important;
+  /* min-width: 100% !important; */
   padding: 0px 30px;
   font-size: 22px;
   outline: none;
@@ -195,7 +204,9 @@ body {
 }
 
 
+
 .icon-nav {
+  display: none;
   /* border: 1px solid red; */
   display: flex;
   align-items: center;
@@ -216,6 +227,7 @@ body {
   align-items: center;
   justify-content: center;
   color: rgba(119, 119, 119, 1);
+
 }
 
 .globe {
@@ -327,6 +339,7 @@ body {
 
 #navbar {
   display: none;
+  z-index: 0;
 }
 
 /* Style the sidenav links and the dropdown button */
@@ -416,160 +429,6 @@ body {
 }
 
 /* Some media queries for responsiveness */
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-
-  .sidenav a {
-    font-size: 18px;
-  }
-}
-
-@media (max-width:992px) {
-  #navbar {
-    display: block;
-  }
-
-  .side {
-    display: none;
-  }
-
-  .nav-form {
-
-    /* flex-direction: column; */
-    height: fit-content;
-    /* height: 120px; */
-    background: #fff;
-    border-radius: 30px;
-  }
-
-  .oncklIckSearch {
-    display: block;
-  }
-
-  .onclIckSearch {
-    display: none !important;
-
-  }
-
-}
-
-@media (max-width:600px) {
-
-
-
-  .sideBar {
-    gap: .3rem;
-
-
-    height: 100%;
-    border-radius: 32px;
-    /* box-shadow:0px 40px 40px rgb(172, 171, 171); */
-    align-items: center;
-    z-index: 9;
-    margin-top: 70px;
-
-  }
-
-  .input-navbar-side .fa-search {
-    display: block;
-    margin-right: 20px;
-  }
-
-  .input-navbar-side input {
-    display: none;
-  }
-
-  .oncklIckSearch {
-    display: block;
-  }
-
-  .onclIckSearch {
-    display: none !important;
-
-  }
-
-
-  .content {
-    position: relative;
-    display: flex;
-
-
-    /* margin-right: -100px !important; */
-  }
-
-  #meals {
-
-    margin-right: 0 !important;
-  }
-
-  .sideBar .img-Logo {
-
-    width: 100px;
-    margin-top: 20px;
-
-    height: 100%;
-
-  }
-}
-
-@media (max-width:500px) {
-  .oncklIckSearch {
-    display: block;
-  }
-
-  .onclIckSearch {
-    display: none !important;
-
-  }
-
-  .formAction {
-
-    /* width: 100px; */
-    /* margin-right:100px !important; */
-
-  }
-
-  .icon-nav {
-    display: flex !important;
-    align-items: center !important;
-
-    /* width: 200px; */
-
-
-
-    width: 100% !important;
-  }
-
-  .fa-moon {
-    width: 30px !important;
-    margin: 0;
-  }
-
-  .input-navbar .fa-search {
-    display: none;
-
-  }
-
-  .input-navbar input {
-
-    /* width: 100% !important; */
-    /* padding: 50px; */
-    font-size: 24px;
-    font-weight: bold;
-    /* margin-top: 10px; */
-    outline: none;
-    border: none;
-    background: #eee;
-    color: #696969;
-    border-radius: 32px;
-    /* margin-right: 20px; */
-
-    height: 60px;
-
-  }
-}
 
 
 ul.Notifications-menu li {
@@ -592,6 +451,7 @@ margin-bottom: -10px;
   gap: 16px;
   display: flex;
   flex-direction: column;
+
 }
 
 .Notifications {
@@ -634,4 +494,166 @@ ul.Notifications-menu.show:hover,.dropdown-menu li a:hover {
   font-weight: 400;
   line-height: 19.20px;
   word-wrap: break-word
+}@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width:992px) {
+  #navbar {
+    display: block;
+  }
+
+  .content-form {
+    display: none;
+  }
+  .input-navbar-side input{
+/* width: 100px !important; */
+  }
+  .icon-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;padding: 0 !important;
+  }
+
+
+.globe span{
+  display: none;}
+  .fa-globe{
+font-size: 15px;
+  }
+  .sideBar{
+    display: none;
+  }
+
+  .nav-form {
+
+
+
+    height: fit-content;
+
+    background: #fff;
+    border-radius: 30px;
+  }
+
+  .oncklIckSearch {
+    display: block;
+  }
+
+  .onclIckSearch {
+    display: none !important;
+
+  }
+
+
+}
+
+@media (max-width:600px) {
+  .sideBar {
+    gap: .3rem;
+
+
+    height: 100%;
+    border-radius: 32px;
+    /* box-shadow:0px 40px 40px rgb(172, 171, 171); */
+    align-items: center;
+    z-index: 9;
+    margin-top: 70px;
+
+  }
+
+
+  .input-navbar-side .fa-search {
+    display: block;
+    margin-right: 20px;
+  }
+  .content {
+    position: relative;
+    display: flex;
+    /* margin-right: -100px !important; */
+  }
+  #meals {
+
+    margin-right: 0 !important;
+  }
+
+  .sideBar .img-Logo {
+
+    width: 100px;
+    margin-top: 20px;
+    height: 100%;
+  }
+}
+
+@media (max-width:750px) {
+
+  .icons-navbar{
+    display: none;
+  }
+
+  .oncklIckSearch {
+    display: block;
+  }
+
+  .onclIckSearch {
+    display: none !important;
+
+  }
+
+  .formAction {
+
+    /* width: 100px; */
+    /* margin-right:100px !important; */
+
+  }
+
+  .icon-nav {
+    display: flex !important;
+    align-items: center !important;
+
+    /* width: 200px; */
+
+
+
+    width: 100% !important;
+  }
+
+  .fa-moon {
+    width: 30px !important;
+    margin: 0;
+  }
+
+  .input-navbar .fa-search {
+    display: none;
+
+  }
+
+  .input-navbar-side input {
+
+    width: 100% !important;
+    /* padding: 50px; */
+    font-size: 20px;
+    font-weight: bold;
+    /* margin-top: 10px; */
+    outline: none;
+    border: none;
+    background: #eee;
+    color: #696969;
+    border-radius: 32px;
+    /* margin-right: 20px; */
+
+    height: 60px;
+/* display: none; */
+  }
+}
+@media (max-width:1400px) and (min-width:993px) {
+  #search-container{
+    display: block !important;
+  }
 }
